@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EK Recruiting Company — Executive Search, Board & Leadership, and confidential senior-level recruitment led by Dana R. Meacham.">
+<title>EK Recruiting Company | Executive Search</title>
+<style>
+:root{
+  --ink:#101315;
+  --muted:#697174;
+  --paper:#f6f5f1;
+  --white:#fff;
+  --line:#d9d9d4;
+  --accent:#b68b5a;
+  --accent-dark:#8e6840;
+  --serif:"Iowan Old Style","Baskerville","Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+.nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(16,19,21,.1)}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-mark{width:36px;height:36px;border:1px solid var(--ink);display:grid;place-items:center;font-family:var(--serif);font-size:18px}
+.brand-name{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:13px}
+.nav-links a{color:#4e5557}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta,.btn-dark{background:var(--ink);color:white;padding:13px 19px;border:1px solid var(--ink);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.hero{min-height:720px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px;padding:78px 0 90px}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:700;color:var(--accent-dark);margin-bottom:24px}
+.hero h1{font-family:var(--serif);font-size:clamp(56px,7.2vw,104px);line-height:.91;letter-spacing:-.045em;font-weight:400;margin:0 0 31px;max-width:760px}
+.hero p{font-size:18px;line-height:1.75;color:#555d60;max-width:620px;margin:0 0 34px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-outline{border:1px solid #aeb0ab;padding:13px 19px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.btn-outline:hover{background:#fff}
+.hero-visual{height:570px;position:relative;overflow:hidden;background:#1a1e20}
+.hero-visual:before{content:"";position:absolute;inset:0;background:
+linear-gradient(135deg,rgba(0,0,0,.72),rgba(0,0,0,.08)),
+radial-gradient(circle at 75% 20%,rgba(182,139,90,.65),transparent 30%),
+linear-gradient(150deg,#22292a 0%,#646762 45%,#202426 100%)}
+.hero-visual:after{content:"";position:absolute;width:310px;height:430px;border:1px solid rgba(255,255,255,.28);right:54px;top:70px;transform:rotate(5deg)}
+.visual-copy{position:absolute;left:36px;bottom:34px;color:#fff;z-index:2}
+.visual-copy span{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.72;margin-bottom:9px}
+.visual-copy strong{font-family:var(--serif);font-size:32px;font-weight:400}
+.hero-note{display:flex;gap:18px;margin-top:28px;color:#7b8182;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.intro{padding:110px 0;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:.7fr 1.3fr;gap:100px}
+.kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent-dark)}
+.display{font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.5vw,64px);line-height:1.02;letter-spacing:-.03em;margin:14px 0 24px}
+.lead{font-size:18px;color:#5f6668;line-height:1.8;max-width:720px}
+.services{padding:0 0 120px}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:52px}
+.service{padding:38px 30px 45px 0;border-bottom:1px solid var(--line)}
+.service:not(:last-child){border-right:1px solid var(--line);padding-right:38px}
+.service+ .service{padding-left:30px}
+.num{font-size:11px;color:var(--accent-dark);letter-spacing:.16em}
+.service h3{font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.05;margin:40px 0 18px}
+.service p{color:#697174;font-size:14px;line-height:1.75}
+.link{display:inline-block;margin-top:17px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;border-bottom:1px solid var(--accent)}
+.dark{background:#15191b;color:white}
+.approach{padding:115px 0}
+.approach .lead{color:#aeb4b5}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:65px;border-top:1px solid rgba(255,255,255,.18)}
+.step{padding:30px 32px 20px 0;border-bottom:1px solid rgba(255,255,255,.12);min-height:210px}
+.step:nth-child(3n+2),.step:nth-child(3n+3){padding-left:32px;border-left:1px solid rgba(255,255,255,.12)}
+.step-number{font-size:11px;color:#d0ad7f;letter-spacing:.16em}
+.step h4{font-family:var(--serif);font-size:29px;font-weight:400;margin:27px 0 12px}
+.step p{font-size:13px;color:#aeb4b5;line-height:1.7;max-width:330px}
+.industries{padding:110px 0}
+.industry-grid{display:grid;grid-template-columns:repeat(2,1fr);margin-top:55px;border-top:1px solid var(--ink)}
+.industry{padding:27px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.industry h3{font-family:var(--serif);font-size:27px;font-weight:400;margin:0}
+.industry span{font-size:18px;color:var(--accent-dark)}
+.board{padding:110px 0;background:#e8e6df}
+.board-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.board-card{background:#181c1e;color:#fff;padding:50px}
+.board-card p{color:#b7bdbe;font-size:14px;line-height:1.8}
+.board-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:30px}
+.board-list div{font-size:11px;text-transform:uppercase;letter-spacing:.1em;border-top:1px solid rgba(255,255,255,.17);padding-top:14px}
+.insights{padding:110px 0}
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:55px}
+.article{border-top:1px solid var(--ink);padding-top:24px}
+.article .tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);font-weight:700}
+.article h3{font-family:var(--serif);font-size:27px;font-weight:400;line-height:1.15;margin:26px 0 30px}
+.article p{font-size:13px;color:var(--muted)}
+.contact{padding:110px 0;background:#ddd9d0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+.form{background:#f7f5f0;padding:42px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+input,textarea{width:100%;border:1px solid #c8c7c1;background:transparent;padding:13px 12px;outline:none;margin-bottom:17px}
+textarea{min-height:125px;resize:vertical}
+input:focus,textarea:focus{border-color:var(--accent)}
+.form button{cursor:pointer}
+.footer{background:#101315;color:#fff;padding:55px 0 30px}
+.footer-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:55px}
+.footer small,.footer a{color:#9da3a4;font-size:12px}
+.footer-links{display:flex;gap:25px}
+.legal{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between}
+.signature{font-family:var(--serif);font-size:25px;margin-top:35px}
+.signature-sub{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9da3a4}
+.chat-toggle{position:fixed;right:24px;bottom:24px;width:60px;height:60px;border:0;background:var(--ink);color:#fff;border-radius:50%;box-shadow:0 12px 35px rgba(0,0,0,.2);cursor:pointer;z-index:30;font-size:20px}
+.chat{position:fixed;right:24px;bottom:96px;width:min(390px,calc(100vw - 32px));background:#fff;box-shadow:0 25px 70px rgba(0,0,0,.2);z-index:29;border:1px solid #ddd;display:none}
+.chat.open{display:block}
+.chat-head{background:var(--ink);color:#fff;padding:19px 20px;display:flex;justify-content:space-between;align-items:center}
+.chat-head strong{font-family:var(--serif);font-size:20px;font-weight:400}
+.chat-head span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#aeb4b5}
+.chat-body{padding:18px;height:360px;overflow:auto;background:#faf9f6}
+.msg{max-width:88%;padding:11px 13px;margin-bottom:10px;font-size:13px;line-height:1.55}
+.bot{background:#eceae4}
+.user{background:var(--ink);color:#fff;margin-left:auto}
+.chat-options{display:flex;flex-wrap:wrap;gap:7px;padding:10px 0}
+.chat-options button{border:1px solid #c9c7c0;background:white;padding:8px 10px;font-size:11px;cursor:pointer}
+.chat-input{display:flex;border-top:1px solid #ddd}
+.chat-input input{margin:0;border:0;padding:14px}
+.chat-input button{border:0;background:var(--ink);color:white;padding:0 17px;cursor:pointer}
+@media(max-width:900px){
+ .nav-links{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:60px}.hero-visual{height:450px}
+ .split,.board-grid,.contact-grid{grid-template-columns:1fr;gap:45px}
+ .service-grid,.steps,.article-grid{grid-template-columns:1fr}
+ .service:not(:last-child){border-right:0;padding-right:0}.service+.service{padding-left:0}
+ .step:nth-child(3n+2),.step:nth-child(3n+3){padding-left:0;border-left:0}
+ .industry-grid{grid-template-columns:1fr}.container{width:min(var(--max),calc(100% - 32px))}
+ .footer-top,.legal{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="container nav">
+  <a class="brand" href="#top"><span class="brand-mark">EK</span><span class="brand-name">EK Recruiting Company</span></a>
+  <nav class="nav-links">
+    <a href="#firm">Firm</a><a href="#search">Executive Search</a><a href="#board">Board & Leadership</a><a href="#insights">Insights</a><a href="#candidates">Candidates</a>
+    <a class="nav-cta" href="#contact">Start a Search</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="container hero">
+  <div>
+    <div class="eyebrow">Executive Search · Leadership Advisory · Board Appointments</div>
+    <h1>Exceptional leadership, deliberately found.</h1>
+    <p>EK Recruiting Company partners with organizations to identify, assess, and engage exceptional executives for consequential leadership appointments.</p>
+    <div class="actions"><a class="btn-dark" href="#contact">Start a Search</a><a class="btn-outline" href="#candidates">Explore Executive Opportunities</a></div>
+    <div class="hero-note"><span>Confidentiality</span><span>Executive Search</span><span>Board & Leadership</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="visual-copy"><span>EK Recruiting Company</span><strong>Leadership for the moments that matter.</strong></div>
+  </div>
+</section>
+
+<section class="intro" id="firm"><div class="container split">
+  <div><div class="kicker">The firm</div></div>
+  <div><h2 class="display">Leadership decisions have lasting consequences.</h2><p class="lead">The most important appointments rarely come from simply posting a position. They require a clear understanding of the organization, the mandate, the leadership environment, and the individuals capable of succeeding within it.</p><p class="lead">EK Recruiting Company takes a focused, discreet approach to executive search, combining targeted market research with direct executive engagement and thoughtful assessment.</p></div>
+</div></section>
+
+<section class="container services" id="search">
+  <div class="kicker">What we do</div><h2 class="display">Search with perspective.</h2>
+  <div class="service-grid">
+    <article class="service"><span class="num">01 / 03</span><h3>Executive Search</h3><p>Targeted searches for C-suite, presidents, general managers, and senior functional leaders whose experience aligns with the organization's strategic requirements.</p><a class="link" href="#contact">Explore search</a></article>
+    <article class="service"><span class="num">02 / 03</span><h3>Board & Director Search</h3><p>Director and advisory appointments designed around governance needs, strategic perspective, industry expertise, risk, growth, and committee requirements.</p><a class="link" href="#board">Explore board search</a></article>
+    <article class="service"><span class="num">03 / 03</span><h3>Leadership Advisory</h3><p>Executive assessment, succession thinking, leadership mapping, and market intelligence to support high-consequence leadership decisions.</p><a class="link" href="#contact">Discuss a mandate</a></article>
+  </div>
+</section>
+
+<section class="dark approach"><div class="container">
+  <div class="kicker">Our approach</div><h2 class="display">A search built around the mandate.</h2><p class="lead">We look beyond job titles and visible profiles to understand the substance of leadership experience and the conditions in which a candidate can create value.</p>
+  <div class="steps">
+    <div class="step"><span class="step-number">01</span><h4>Understand</h4><p>Define the business context, leadership culture, expectations, and mandate.</p></div>
+    <div class="step"><span class="step-number">02</span><h4>Map</h4><p>Identify the relevant executive market, organizations, functions, and leadership trajectories.</p></div>
+    <div class="step"><span class="step-number">03</span><h4>Engage</h4><p>Approach qualified executives directly and discreetly.</p></div>
+    <div class="step"><span class="step-number">04</span><h4>Assess</h4><p>Consider leadership scope, strategic contribution, governance, fit, and potential conflicts.</p></div>
+    <div class="step"><span class="step-number">05</span><h4>Present</h4><p>Deliver a focused slate with relevant context for informed consideration.</p></div>
+    <div class="step"><span class="step-number">06</span><h4>Support</h4><p>Remain engaged through interviews, references, negotiation, and appointment.</p></div>
+  </div>
+</div></section>
+
+<section class="container industries"><div class="kicker">Industries</div><h2 class="display">Expertise where leadership matters most.</h2>
+  <div class="industry-grid">
+    <div class="industry"><h3>Healthcare & Life Sciences</h3><span>↗</span></div>
+    <div class="industry"><h3>Technology & Digital</h3><span>↗</span></div>
+    <div class="industry"><h3>Financial Services</h3><span>↗</span></div>
+    <div class="industry"><h3>Energy & Infrastructure</h3><span>↗</span></div>
+    <div class="industry"><h3>Education & Human Capital</h3><span>↗</span></div>
+    <div class="industry"><h3>Consumer & Industrial</h3><span>↗</span></div>
+  </div>
+</section>
+
+<section class="board" id="board"><div class="container board-grid">
+  <div><div class="kicker">Board & leadership</div><h2 class="display">The right board begins with the right people.</h2><p class="lead">Boards increasingly require directors who bring more than a prestigious career history. We help organizations identify leaders who can contribute meaningful perspective across strategy, governance, risk, growth, technology, finance, operations, and industry expertise.</p></div>
+  <div class="board-card"><div class="kicker">Board mandates</div><p>Focused search support for organizations strengthening board composition and leadership depth.</p><div class="board-list"><div>Board Directors</div><div>Independent Directors</div><div>Advisory Directors</div><div>Committee Expertise</div><div>CEO Succession</div><div>Specialist Governance</div></div></div>
+</div></section>
+
+<section class="container insights" id="insights"><div class="kicker">Insights</div><h2 class="display">Perspective for consequential decisions.</h2>
+  <div class="article-grid">
+    <article class="article"><span class="tag">Board Leadership</span><h3>Preparing for the Next Generation of Board Leadership</h3><p>What organizations should consider when refreshing board composition.</p></article>
+    <article class="article"><span class="tag">Executive Search</span><h3>The Executive Search Has Changed</h3><p>Why senior leadership appointments require more than conventional recruitment.</p></article>
+    <article class="article"><span class="tag">Governance</span><h3>What Makes an Executive Board-Ready?</h3><p>The difference between operational achievement and board-level value.</p></article>
+  </div>
+</section>
+
+<section class="container" id="candidates" style="padding-bottom:110px"><div class="dark" style="padding:65px">
+  <div class="kicker">For executives</div><h2 class="display">The right opportunity is rarely the obvious one.</h2><p class="lead">Many senior executives are not actively searching for their next appointment. We introduce opportunities selectively and confidentially when there is meaningful alignment between an executive's experience and an organization's leadership requirements.</p><a class="btn-outline" style="color:white;border-color:#777" href="mailto:dana.r.meacham.recruit@gmail.com?subject=Executive%20Profile%20-%20EK%20Recruiting%20Company">Register as an Executive</a>
+</div></section>
+
+<section class="contact" id="contact"><div class="container contact-grid">
+  <div><div class="kicker">Start a conversation</div><h2 class="display">The next leadership decision starts here.</h2><p class="lead">Tell us about the mandate. Search inquiries are treated confidentially.</p><div class="signature">Dana R. Meacham</div><div class="signature-sub">EK Recruiting Company · Executive Recruiter</div><p style="margin-top:28px"><a href="mailto:dana.r.meacham.recruit@gmail.com">dana.r.meacham.recruit@gmail.com</a></p></div>
+  <form class="form" onsubmit="sendInquiry(event)">
+    <div class="form-row"><div><label>Your name</label><input id="name" required></div><div><label>Company</label><input id="company"></div></div>
+    <div class="form-row"><div><label>Email</label><input id="email" type="email" required></div><div><label>Search type</label><input id="type" placeholder="C-suite / Board / Other"></div></div>
+    <label>Tell us about the search</label><textarea id="message" required></textarea>
+    <button class="btn-dark" type="submit">Send Confidential Inquiry</button>
+  </form>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer-top"><div><div class="brand"><span class="brand-mark" style="border-color:#fff">EK</span><span class="brand-name">EK Recruiting Company</span></div><small>Executive Search · Leadership Advisory · Board Appointments</small></div><div class="footer-links"><a href="#firm">Firm</a><a href="#search">Search</a><a href="#board">Board</a><a href="#contact">Contact</a></div></div>
+  <div class="legal"><small>© 2026 EK Recruiting Company. All rights reserved.</small><small>Confidential executive search and leadership services.</small></div>
+</div></footer>
+
+<div class="chat" id="chat">
+  <div class="chat-head"><div><strong>EK Search Assistant</strong><br><span>Executive Search Desk</span></div><button onclick="toggleChat()" style="background:none;border:0;color:white;font-size:20px;cursor:pointer">×</button></div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Welcome to EK Recruiting Company. How can we assist you today?</div>
+    <div class="chat-options">
+      <button onclick="choose('I am an employer')">I’m an employer</button>
+      <button onclick="choose('I am an executive')">I’m an executive</button>
+      <button onclick="choose('I have a question')">I have a question</button>
+    </div>
+  </div>
+  <div class="chat-input"><input id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">Send</button></div>
+</div>
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Open chat">✦</button>
+
+<script>
+const email='dana.r.meacham.recruit@gmail.com';
+function toggleChat(){document.getElementById('chat').classList.toggle('open')}
+function addMsg(text,who='bot'){const b=document.getElementById('chatBody');const d=document.createElement('div');d.className='msg '+who;d.textContent=text;b.appendChild(d);b.scrollTop=b.scrollHeight}
+function choose(text){
+ addMsg(text,'user');
+ setTimeout(()=>{
+   if(text.includes('employer')) addMsg('We can help with C-suite, senior leadership, board, independent director, and specialized executive searches. Tell me what type of appointment you are considering, and I can help you prepare an inquiry for Dana.');
+   else if(text.includes('executive')) addMsg('EK works with executives on a confidential basis. You can introduce your background and the type of leadership opportunity you would consider. I can also direct you to Dana by email.');
+   else addMsg('You can ask about our search process, board appointments, executive opportunities, industries, or how to begin a confidential search.');
+ },350)
+}
+function sendChat(){
+ const i=document.getElementById('chatInput');const v=i.value.trim();if(!v)return;addMsg(v,'user');i.value='';
+ setTimeout(()=>addMsg('Thank you. For a confidential response from Dana R. Meacham, please email dana.r.meacham.recruit@gmail.com. You can also use the “Start a Search” form on this page.'),450)
+}
+function sendInquiry(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value, company=document.getElementById('company').value, em=document.getElementById('email').value, type=document.getElementById('type').value, message=document.getElementById('message').value;
+ const subject=encodeURIComponent('Confidential Search Inquiry - '+(company||name));
+ const body=encodeURIComponent('Name: '+name+'\nCompany: '+company+'\nEmail: '+em+'\nSearch type: '+type+'\n\nSearch details:\n'+message);
+ window.location.href='mailto:'+email+'?subject='+subject+'&body='+body;
+}
+</script>
+</body>
+</html>
